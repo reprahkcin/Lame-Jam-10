@@ -23,6 +23,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        CanvasManager.instance.UpdateSpeedReadout(playerSpeed);
+        if (playerSpeed > 20)
+        {
+            // Change obstacle material albedo to red
+            obstacleMaterial.SetColor("_Color", Color.red);
+        }
+        if (playerSpeed < 20 && playerSpeed > 15)
+        {
+
+            // Change obstacle material albedo to orange
+            obstacleMaterial.SetColor("_Color", new Color(1, 0.5f, 0));
+
+        }
+        if (playerSpeed < 15 && playerSpeed > 10)
+        {
+
+            // Change obstacle material albedo to yellow
+            obstacleMaterial.SetColor("_Color", Color.yellow);
+        }
+        if (playerSpeed < 10)
+        {
+
+            // Change obstacle material albedo to green
+            obstacleMaterial.SetColor("_Color", Color.green);
+
+        }
+    }
+
     // --------------------------------------------------
     // Master Game Methods
     // TODO: Add methods for game logic
@@ -53,6 +83,8 @@ public class GameManager : MonoBehaviour
 
     // Score
     public int score;
+
+    public Material obstacleMaterial;
 
 
     // score per obstacle

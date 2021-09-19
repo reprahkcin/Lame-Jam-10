@@ -23,6 +23,9 @@ public class CanvasManager : MonoBehaviour
     // Game Clock Text
     public TextMeshProUGUI gameClockText;
 
+    // Speed Readout text
+    public TextMeshProUGUI speedReadoutText;
+
     // Canvases
     public GameObject[] canvases;
 
@@ -87,6 +90,11 @@ public class CanvasManager : MonoBehaviour
     public void UpdateGameClock(float time)
     {
         gameClockText.text = "Time: " + time.ToString("F2");
+    }
+
+    public void UpdateSpeedReadout(float speed)
+    {
+        speedReadoutText.text = "Speed: " + speed.ToString("F2");
     }
 
     // --------------------------------------------------
