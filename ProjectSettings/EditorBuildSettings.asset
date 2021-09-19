@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/3DRoad.unity
-    guid: ab7084c9aab187b46ae7ffe25c8b2d0e
+    path: Assets/Scenes/EndlessRunner.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a734033e5b672254ab12281c98e7f631, type: 2}

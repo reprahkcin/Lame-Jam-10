@@ -16,9 +16,6 @@ public class CanvasManager : MonoBehaviour
     // Blackout Canvas
     public GameObject blackoutCanvas;
 
-    // Score Text
-    public TextMeshProUGUI scoreText;
-
     // Canvases
     public GameObject[] canvases;
 
@@ -71,11 +68,6 @@ public class CanvasManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         blackoutCanvas.SetActive(false);
-    }
-
-    public void UpdateScore()
-    {
-        scoreText.text = "Score: " + GameManager.instance.score;
     }
 
     // --------------------------------------------------
