@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637675294657545523
-    m_Hash: 3139521567
+      ticks: 637676630996652224
+    m_Hash: 1397768243
   m_LockFileStatus:
     m_FilePath: D:/GIT/Lame-Jam-10/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637675294782965630
-    m_Hash: 2313561285
+      ticks: 637676630996657291
+    m_Hash: 3891955694
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
