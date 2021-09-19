@@ -16,6 +16,13 @@ public class CanvasManager : MonoBehaviour
     // Blackout Canvas
     public GameObject blackoutCanvas;
 
+    // Score Text
+    public TextMeshProUGUI scoreText;
+
+
+    // Game Clock Text
+    public TextMeshProUGUI gameClockText;
+
     // Canvases
     public GameObject[] canvases;
 
@@ -25,6 +32,8 @@ public class CanvasManager : MonoBehaviour
 
     // Current Canvas Index
     private int currentCanvasIndex = 0;
+
+
 
     // --------------------------------------------------
     // Methods
@@ -68,6 +77,16 @@ public class CanvasManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         blackoutCanvas.SetActive(false);
+    }
+
+    public void UpdateScore()
+    {
+        scoreText.text = "Score: " + GameManager.instance.score;
+    }
+
+    public void UpdateGameClock(float time)
+    {
+        gameClockText.text = "Time: " + time.ToString("F2");
     }
 
     // --------------------------------------------------
