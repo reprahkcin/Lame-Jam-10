@@ -12,6 +12,7 @@
 -a="D:\GIT\Lame-Jam-10\Library\PlayerScriptAssemblies\Unity.2D.Animation.Runtime.dll"
 -a="D:\GIT\Lame-Jam-10\Library\PlayerScriptAssemblies\Unity.2D.Common.Runtime.dll"
 -a="D:\GIT\Lame-Jam-10\Library\PlayerScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll"
+-a="D:\GIT\Lame-Jam-10\Library\PlayerScriptAssemblies\Unity.Postprocessing.Runtime.dll"
 -a="D:\GIT\Lame-Jam-10\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll"
 -s="C:\Program Files\2020.3.18f1\Editor\Data\Managed\UnityEngine"
 -s="C:\Program Files\2020.3.18f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed"

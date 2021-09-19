@@ -19,4 +19,6 @@ public class Obstacle : MonoBehaviour
             player.Die();
         }
     }
+
+
 }
