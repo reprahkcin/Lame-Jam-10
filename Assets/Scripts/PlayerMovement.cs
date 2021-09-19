@@ -22,13 +22,16 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forwardMove = transform.forward * GameManager.instance.playerSpeed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * Input.GetAxis("Horizontal") * GameManager.instance.playerSpeed * Time.fixedDeltaTime;
 
-        rb.MovePosition(rb.position + forwardMove);
-        rb.MovePosition(rb.position + horizontalMove * hMoveScale);
+        rb.MovePosition(rb.position + forwardMove + horizontalMove);
 
         // Vertical input affects GameManager.instance.playerSpeed
         GameManager.instance.playerSpeed += Input.GetAxis("Vertical") * Time.fixedDeltaTime;
 
     }
+
+
+
+
 
 
     void Update()

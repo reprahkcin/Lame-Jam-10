@@ -58,8 +58,29 @@ public class GroundSpawner : MonoBehaviour
                     tempObstacles.Add(obstacle);
                     // Set obstacle to active
                     obstacle.SetActive(true);
-                    // Set the local y position to random float between -0.5 and 1
-                    obstacle.transform.localPosition = new Vector3(obstacle.transform.localPosition.x, Random.Range(-0.5f, 1.5f), 0);
+                    // // Set the local y position to random float between -0.5 and 1
+                    // obstacle.transform.localPosition = new Vector3(obstacle.transform.localPosition.x, Random.Range(-0.5f, 1.5f), 0);
+                }
+            }
+
+            // For every obstacle in tempObstacles
+            foreach (GameObject obstacle in tempObstacles)
+            {
+                // Set a random (1 out of 3) obstacle height
+                int randomHeight = Random.Range(0, 3);
+                switch (randomHeight)
+                {
+                    case 0:
+                        obstacle.transform.localPosition = new Vector3(obstacle.transform.localPosition.x, 1.5f, obstacle.transform.localPosition.z);
+                        break;
+
+                    case 1:
+                        obstacle.transform.localPosition = new Vector3(obstacle.transform.localPosition.x, 0.5f, obstacle.transform.localPosition.z);
+                        break;
+
+                    case 2:
+                        obstacle.transform.localPosition = new Vector3(obstacle.transform.localPosition.x, -0.5f, obstacle.transform.localPosition.z);
+                        break;
                 }
             }
 
