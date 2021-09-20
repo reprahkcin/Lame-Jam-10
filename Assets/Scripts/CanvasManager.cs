@@ -26,6 +26,9 @@ public class CanvasManager : MonoBehaviour
     // Speed Readout text
     public TextMeshProUGUI speedReadoutText;
 
+    // HealthBar GameObject
+    public GameObject healthBar;
+
     // Canvases
     public GameObject[] canvases;
 
@@ -96,6 +99,16 @@ public class CanvasManager : MonoBehaviour
     {
         speedReadoutText.text = "Speed: " + speed.ToString("F2");
     }
+
+    public void UpdateHealthBar(float health)
+    {
+        // use health as a percentage
+        float healthPercentage = health / 100;
+
+        // set the health bar to that percentage
+        healthBar.transform.localScale = new Vector3(healthPercentage, 1, 1);
+    }
+
 
     // --------------------------------------------------
     // Transport controls
