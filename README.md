@@ -1,7 +1,8 @@
 # Lame-Jam-10
 Game Jam starting on 9-17-21, ending on 9-20-21
 https://itch.io/jam/lame-jam-10
-
+Playable Demo: https://reprahkcin.github.io/Lame-Jam-10/index.html
+itch.io page: https://nickha.itch.io/hover-capsule-zoom-and-jump
 
 ## Brief Summary
 
