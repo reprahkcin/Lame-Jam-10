@@ -64,6 +64,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
   sceneClasses:
     Assets/Scenes/3DRoad.unity:
     - Class: 1
@@ -114,6 +115,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2116}
     - Class: 114
       Script: {instanceID: 2340}
+    - Class: 114
+      Script: {instanceID: 2538}
     - Class: 114
       Script: {instanceID: 2724}
     - Class: 114
@@ -463,7 +466,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
-      Hash: a4f6d499010b9c27f935470ef7e7e63d
+      Hash: 179b49d5269efa272015efa54d00a4d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanvasManager
@@ -559,7 +562,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 0e1ae8f01a0e4bfb0db9bade556c8781
+      Hash: 372697dec3b6fa3261514b4758036ef9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

@@ -21,36 +21,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Find the player
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
         CanvasManager.instance.UpdateSpeedReadout(playerSpeed);
-        if (playerSpeed > 20)
-        {
-            // Change obstacle material albedo to red
-            obstacleMaterial.SetColor("_Color", Color.red);
-        }
-        if (playerSpeed < 20 && playerSpeed > 15)
-        {
+        CanvasManager.instance.UpdateHealthBar(playerHealth);
 
-            // Change obstacle material albedo to orange
-            obstacleMaterial.SetColor("_Color", new Color(1, 0.5f, 0));
-
-        }
-        if (playerSpeed < 15 && playerSpeed > 10)
-        {
-
-            // Change obstacle material albedo to yellow
-            obstacleMaterial.SetColor("_Color", Color.yellow);
-        }
-        if (playerSpeed < 10)
-        {
-
-            // Change obstacle material albedo to green
-            obstacleMaterial.SetColor("_Color", Color.green);
-
-        }
     }
 
     // --------------------------------------------------
@@ -80,6 +60,41 @@ public class GameManager : MonoBehaviour
     // --------------------------------------------------
     // Game Variables
     // --------------------------------------------------
+
+
+
+    // Player Material
+    public Material playerMaterial;
+
+    // Flashing Material
+    public Material flashingMaterial;
+
+    // Player GameObject
+    public GameObject player;
+
+    // Player Health
+    public float playerHealth = 100;
+
+    public void AdjustHealth(float amount)
+    {
+        playerHealth += amount;
+
+        StartCoroutine(FlashColor(0.05f));
+    }
+
+    IEnumerator FlashColor(float duration)
+    {
+        player.GetComponent<Renderer>().material = flashingMaterial;
+        yield return new WaitForSeconds(duration);
+        player.GetComponent<Renderer>().material = playerMaterial;
+        yield return new WaitForSeconds(duration);
+        player.GetComponent<Renderer>().material = flashingMaterial;
+        yield return new WaitForSeconds(duration);
+        player.GetComponent<Renderer>().material = playerMaterial;
+
+
+    }
+
 
     // Score
     public int score;

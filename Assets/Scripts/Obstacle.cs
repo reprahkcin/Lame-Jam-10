@@ -16,7 +16,8 @@ public class Obstacle : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            player.Die();
+            GameManager.instance.AdjustHealth(Mathf.Abs(gameObject.transform.position.y) * -5);
+            GameManager.instance.AddScore(-100);
         }
     }
 
